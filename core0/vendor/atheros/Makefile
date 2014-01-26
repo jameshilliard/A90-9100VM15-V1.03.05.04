@@ -1,0 +1,13 @@
+RGSRC=../../
+include $(RGSRC)/envir.mak
+
+SUBDIRS+=$(if $(CONFIG_ATHEROS_AR531X_MIPS),ar531x)
+SUBDIRS+=$(if $(CONFIG_ATHEROS_ART_TOOLS),art)
+
+ifndef CONFIG_HW_80211N_ATHEROS_AR50WL
+SUBDIRS+=$(if $(CONFIG_HW_80211G_ATHEROS_AR521X),madwifi)
+else
+SUBDIRS+=$(if $(CONFIG_HW_80211N_ATHEROS_AR50WL),madwifi-11n)
+endif
+
+include $(RGMK)

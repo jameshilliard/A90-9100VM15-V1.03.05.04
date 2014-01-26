@@ -1,0 +1,7 @@
+#ifndef _UIMAGE_LOAD_PARAMS_H_
+#define _UIMAGE_LOAD_PARAMS_H_
+
+#define PARAM_IH_EP 0x8154c040
+#define PARAM_IH_LOAD 0x81402000
+
+#endif
